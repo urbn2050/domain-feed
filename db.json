@@ -1,9 +1,14 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+  "feed-3star": [
+    {
+      "domain": "craftmy.ai",
+      "price": 9,
+      "link": "https://www.sav.com/domain/craftmy.ai"
+    },
+    {
+      "domain": "maventy.ai",
+      "price": 11,
+      "link": "https://www.sav.com/domain/maventy.ai"
+    }
+  ]
 }
