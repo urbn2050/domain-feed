@@ -1,0 +1,35 @@
+[
+  {
+    "domain": "craftmy.ai",
+    "price": 9,
+    "link": "https://www.sav.com/domain/craftmy.ai",
+    "stars": 3,
+    "sent": false,
+    "timestamp": "2025-06-24T13:51:39.641361",
+    "estimated_resale_value": 1800,
+    "age_years": 2,
+    "backlinks": 14
+  },
+  {
+    "domain": "clariby.com",
+    "price": 19,
+    "link": "https://www.sav.com/domain/clariby.com",
+    "stars": 2,
+    "sent": false,
+    "timestamp": "2025-06-24T13:51:39.641369",
+    "estimated_resale_value": 950,
+    "age_years": 1,
+    "backlinks": 7
+  },
+  {
+    "domain": "cheapest.me",
+    "price": 3,
+    "link": "https://www.sav.com/domain/cheapest.me",
+    "stars": 1,
+    "sent": false,
+    "timestamp": "2025-06-24T13:51:39.641371",
+    "estimated_resale_value": 120,
+    "age_years": 0,
+    "backlinks": 0
+  }
+]
