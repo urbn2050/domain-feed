@@ -2,31 +2,31 @@
   "feed-3star": [
     {
       "domain": "craftmy.ai",
-      "price": 9,
+      "price": 9.0,
       "link": "https://www.sav.com/domain/craftmy.ai"
     }
   ],
   "feed-2star": [
     {
       "domain": "clariby.com",
-      "price": 19,
+      "price": 19.0,
       "link": "https://www.sav.com/domain/clariby.com"
     },
     {
       "domain": "bitfolio.net",
-      "price": 15,
+      "price": 15.0,
       "link": "https://www.sav.com/domain/bitfolio.net"
     }
   ],
   "feed-1star": [
     {
       "domain": "cheapest.me",
-      "price": 3,
+      "price": 3.0,
       "link": "https://www.sav.com/domain/cheapest.me"
     },
     {
       "domain": "dealydeals.store",
-      "price": 5,
+      "price": 5.0,
       "link": "https://www.sav.com/domain/dealydeals.store"
     }
   ]
