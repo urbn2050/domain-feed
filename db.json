@@ -6,9 +6,33 @@
       "link": "https://www.sav.com/domain/craftmy.ai"
     },
     {
-      "domain": "maventy.ai",
-      "price": 11,
-      "link": "https://www.sav.com/domain/maventy.ai"
+      "domain": "mintcore.com",
+      "price": 85,
+      "link": "https://www.sav.com/domain/mintcore.com"
+    }
+  ],
+  "feed-2star": [
+    {
+      "domain": "clariby.com",
+      "price": 19,
+      "link": "https://www.sav.com/domain/clariby.com"
+    },
+    {
+      "domain": "bitfolio.net",
+      "price": 15,
+      "link": "https://www.sav.com/domain/bitfolio.net"
+    }
+  ],
+  "feed-1star": [
+    {
+      "domain": "cheaptest.me",
+      "price": 3,
+      "link": "https://www.sav.com/domain/cheaptest.me"
+    },
+    {
+      "domain": "dealydeals.store",
+      "price": 5,
+      "link": "https://www.sav.com/domain/dealydeals.store"
     }
   ]
 }
