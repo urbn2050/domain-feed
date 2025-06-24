@@ -1,37 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Domain Feed</title>
-  <style>
-    body { font-family: sans-serif; margin: 20px; }
-    h2 { margin-top: 40px; }
-    ul { padding-left: 20px; }
-  </style>
-</head>
-<body>
-  <h1>Domain Feed Übersicht</h1>
-
-  <div id="feeds"></div>
-
-  <script>
-    const feedNames = ['3star', '2star', '1star'];
-    const baseURL = window.location.origin;
-
-    async function loadFeed(stars) {
-      const res = await fetch(`${baseURL}/feed-${stars}star`);
-      const data = await res.json();
-      return data.map(entry => `<li><strong>${entry.domain}</strong> – $${entry.price} – <a href="${entry.link}" target="_blank">Link</a></li>`).join('');
+{
+  "feed-3star": [
+    {
+      "domain": "craftmy.ai",
+      "price": 9,
+      "link": "https://www.sav.com/domain/craftmy.ai"
+    },
+    {
+      "domain": "mintcore.com",
+      "price": 85,
+      "link": "https://www.sav.com/domain/mintcore.com"
     }
-
-    (async () => {
-      const container = document.getElementById('feeds');
-      for (let star of feedNames) {
-        const items = await loadFeed(star);
-        container.innerHTML += `<h2>Feed ${star}★</h2><ul>${items}</ul>`;
-      }
-    })();
-  </script>
-</body>
-</html>
+  ],
+  "feed-2star": [
+    {
+      "domain": "clariby.com",
+      "price": 19,
+      "link": "https://www.sav.com/domain/clariby.com"
+    },
+    {
+      "domain": "bitfolio.net",
+      "price": 15,
+      "link": "https://www.sav.com/domain/bitfolio.net"
+    }
+  ],
+  "feed-1star": [
+    {
+      "domain": "cheapest.me",
+      "price": 3,
+      "link": "https://www.sav.com/domain/cheapest.me"
+    },
+    {
+      "domain": "dealydeals.store",
+      "price": 5,
+      "link": "https://www.sav.com/domain/dealydeals.store"
+    }
+  ]
+}
 
