@@ -32,6 +32,58 @@ Demo from this repository:
 }
 ```
 
+## Geburtstags-Couverts & Grusskarten als PDF erzeugen
+
+Dieses Repository enthält ausserdem ein Skript, das Geburtstagsadressen und -grüsse aus einem Google Sheet holt und druckfertige PDFs erzeugt:
+
+* **C5-Couverts** (ein Umschlag pro Seite)
+* **A4 Querformat** mit zwei Spalten (links Bibelvers, rechts wertschätzender Geburtstagsgruss)
+
+### Voraussetzungen
+
+1. Erstelle in der Google Cloud Console ein Service-Konto und lade den JSON-Schlüssel herunter.
+2. Teile das Google Sheet mit der E-Mail-Adresse des Service-Kontos.
+3. Hinterlege die Zugangsdaten als Umgebungsvariablen – z. B. in einer `.env` Datei:
+
+   ```bash
+   GOOGLE_SHEETS_ID=1abcdefgh1234567890    # ID aus der Google-Sheet-URL
+   GOOGLE_SERVICE_ACCOUNT_EMAIL=service-account@projekt.iam.gserviceaccount.com
+   GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
+   GOOGLE_SHEETS_RANGE=Geburtstage!A:H     # optional, Standard ist Sheet1!A:Z
+   TIMEZONE=Europe/Zurich                  # optional
+   OUTPUT_DIR=output                       # optional
+   ```
+
+4. Installiere die Abhängigkeiten (z. B. mit `pnpm install`).
+
+### Spalten im Google Sheet
+
+Die erste Zeile des Sheets muss Überschriften enthalten. Das Skript erkennt u. a. folgende Spaltennamen (Gross-/Kleinschreibung egal):
+
+| Zweck                | Mögliche Überschriften (Beispiele)           |
+| -------------------- | -------------------------------------------- |
+| Name                 | `Name`, `Vorname Nachname`, `Fullname`       |
+| Vorname / Nachname   | `Vorname`, `Nachname`                        |
+| Geburtstag           | `Geburtstag`, `Geburtsdatum`, `Birthday`     |
+| Adresse              | `Adresse`, `Adresszeile 1`, `Adresszeile 2`  |
+| Strasse              | `Strasse`, `Straße`, `Street`                |
+| PLZ                  | `PLZ`, `Postleitzahl`, `ZIP`                 |
+| Ort                  | `Ort`, `Stadt`, `City`                       |
+| Bibelvers            | `Bibelvers`, `Bibelstelle`, `Losung`         |
+| Gruss                | `Gruss`, `Grusswort`, `Segenswunsch`, `Greeting` |
+
+Für den Grusstext können die Platzhalter `{{name}}` oder `{{vorname}}` verwendet werden. Ist kein individueller Bibelvers oder Gruss hinterlegt, werden automatisch deutsche Standardtexte eingefügt.
+
+### Skript ausführen
+
+```bash
+pnpm run generate-birthday-mailers
+```
+
+Die PDFs werden im Ordner `output/` (oder dem in `OUTPUT_DIR` gesetzten Pfad) abgelegt. Die Dateinamen enthalten das Datumsintervall der ausgewerteten Kalenderwoche.
+
+Falls in der aktuellen Woche keine Geburtstage vorhanden sind, wird kein PDF erzeugt und eine entsprechende Meldung ausgegeben.
+
 ## Enable write operations
 
 By default, only GET operation is allowed, thanks to the contribution by [@VicAv99](https://www.github.com/VicAv99) at [#6](https://github.com/kitloong/json-server-vercel/issues/6), we can now enable write operations as well.
