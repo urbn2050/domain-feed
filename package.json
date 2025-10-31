@@ -4,9 +4,14 @@
   "description": "Deploy JSON Server to Vercel",
   "main": "api/server.js",
   "scripts": {
-    "start": "node api/server.js"
+    "start": "node api/server.js",
+    "generate-birthday-mailers": "node scripts/generate-birthday-docs.js"
   },
   "dependencies": {
-    "json-server": "^0.17.4"
+    "dotenv": "^16.4.5",
+    "googleapis": "^126.0.1",
+    "json-server": "^0.17.4",
+    "luxon": "^3.4.4",
+    "pdfkit": "^0.13.0"
   }
 }
